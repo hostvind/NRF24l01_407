@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"nrf24l01_407\startup_stm32f407xx.o"
+"nrf24l01_407\stm32f4xx_hal_spi.o"
+"nrf24l01_407\stm32f4xx_hal_tim.o"
+"nrf24l01_407\stm32f4xx_hal_uart.o"
+"nrf24l01_407\stm32f4xx_hal_dma_ex.o"
+"nrf24l01_407\stm32f4xx_hal_cortex.o"
+"nrf24l01_407\stm32f4xx_hal_pwr_ex.o"
+"nrf24l01_407\stm32f4xx_hal_tim_ex.o"
+"nrf24l01_407\stm32f4xx_hal_flash.o"
+"nrf24l01_407\stm32f4xx_hal_gpio.o"
+"nrf24l01_407\stm32f4xx_hal_flash_ex.o"
+"nrf24l01_407\stm32f4xx_hal.o"
+"nrf24l01_407\stm32f4xx_hal_pwr.o"
+"nrf24l01_407\stm32f4xx_hal_flash_ramfunc.o"
+"nrf24l01_407\stm32f4xx_hal_rcc.o"
+"nrf24l01_407\stm32f4xx_hal_rcc_ex.o"
+"nrf24l01_407\stm32f4xx_hal_dma.o"
+"nrf24l01_407\stm32f4xx_it.o"
+"nrf24l01_407\main.o"
+"nrf24l01_407\stm32f4xx_hal_msp.o"
+"nrf24l01_407\system_stm32f4xx.o"
+"nrf24l01_407\nrf24l01.o"
+--library_type=microlib --strict --scatter "NRF24l01_407\NRF24l01_407.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "NRF24l01_407.map" -o NRF24l01_407\NRF24l01_407.axf
