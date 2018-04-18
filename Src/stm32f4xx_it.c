@@ -37,9 +37,7 @@
 
 /* USER CODE BEGIN 0 */
 #include "nrf24l01.h"
-extern uint8_t IRQ1_counter, IRQ2_counter;
 extern nrf24l01_dev nrf1;
-//extern nrf24l01_dev nrf2;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -200,11 +198,10 @@ void SysTick_Handler(void)
 void EXTI2_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI2_IRQn 0 */
-/*DEBUG LINE*/  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
+/*DEBUG LINE*/  //HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
   /* USER CODE END EXTI2_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2);
   /* USER CODE BEGIN EXTI2_IRQn 1 */
-    IRQ1_counter++;
   NRF_IRQ_Handler(&nrf1);
   /* USER CODE END EXTI2_IRQn 1 */
 }
@@ -215,13 +212,10 @@ void EXTI2_IRQHandler(void)
 void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
-/*DEBUG LINE*/  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
-
+    
   /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_10);
-  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
-    IRQ2_counter++;
-  //NRF_IRQ_Handler(&nrf2);
+  /* USER CODE BEGIN EXTI15_10_IRQn 1 */    
 
   /* USER CODE END EXTI15_10_IRQn 1 */
 }

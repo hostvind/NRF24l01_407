@@ -3,11 +3,11 @@
 <title>Static Call Graph - [NRF24l01_407\NRF24l01_407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image NRF24l01_407\NRF24l01_407.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Apr 17 16:22:31 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Apr 18 12:58:16 2018
 <BR><P>
 <H3>Maximum Stack Usage =        192 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-EXTI2_IRQHandler &rArr; NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+EXTI2_IRQHandler &rArr; NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 <P>
 <H3>
 Mutually Recursive functions
@@ -123,7 +123,7 @@ Global Symbols
 <P><STRONG><a name="[5d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(.text)
 </UL>
-<P><STRONG><a name="[92]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[a6]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[5e]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -133,15 +133,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[93]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[a7]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[94]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[a8]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[95]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[a9]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[96]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[aa]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[97]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[ab]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f407xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
@@ -393,20 +393,20 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 
 <P><STRONG><a name="[62]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[98]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[ac]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[61]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[99]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[ad]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[5f]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
@@ -414,7 +414,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[9a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[ae]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.BusFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
@@ -426,209 +426,208 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[32]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.EXTI15_10_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EXTI15_10_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler
+<P><STRONG><a name="[32]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.EXTI15_10_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI15_10_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
-</UL>
-<P><STRONG><a name="[12]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.EXTI2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = EXTI2_IRQHandler &rArr; NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[67]"></a>HAL_Delay</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, stm32f4xx_hal.o(i.HAL_Delay))
+<P><STRONG><a name="[12]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.EXTI2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = EXTI2_IRQHandler &rArr; NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
+</UL>
+<P><STRONG><a name="[66]"></a>HAL_Delay</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, stm32f4xx_hal.o(i.HAL_Delay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
 </UL>
 
-<P><STRONG><a name="[69]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback))
-<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
+<P><STRONG><a name="[68]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback))
+<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 </UL>
 
-<P><STRONG><a name="[65]"></a>HAL_GPIO_EXTI_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler))
+<P><STRONG><a name="[64]"></a>HAL_GPIO_EXTI_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_GPIO_EXTI_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_IRQHandler
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 </UL>
 
-<P><STRONG><a name="[76]"></a>HAL_GPIO_Init</STRONG> (Thumb, 388 bytes, Stack size 40 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
+<P><STRONG><a name="[75]"></a>HAL_GPIO_Init</STRONG> (Thumb, 388 bytes, Stack size 40 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[64]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CS_RESETPIN
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
+<P><STRONG><a name="[7c]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CS_RESETPIN
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
-<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_IRQHandler
-<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
 </UL>
 
-<P><STRONG><a name="[68]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<P><STRONG><a name="[67]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 
-<P><STRONG><a name="[8d]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
+<P><STRONG><a name="[a1]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[6a]"></a>HAL_Init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32f4xx_hal.o(i.HAL_Init))
+<P><STRONG><a name="[69]"></a>HAL_Init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32f4xx_hal.o(i.HAL_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_Init &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>HAL_InitTick</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, stm32f4xx_hal.o(i.HAL_InitTick))
+<P><STRONG><a name="[6b]"></a>HAL_InitTick</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, stm32f4xx_hal.o(i.HAL_InitTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 
-<P><STRONG><a name="[6d]"></a>HAL_MspInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f4xx_hal_msp.o(i.HAL_MspInit))
+<P><STRONG><a name="[6c]"></a>HAL_MspInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f4xx_hal_msp.o(i.HAL_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[91]"></a>HAL_NVIC_DisableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ))
+<P><STRONG><a name="[a5]"></a>HAL_NVIC_DisableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[7d]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[6f]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
+<P><STRONG><a name="[6e]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-</UL>
-
-<P><STRONG><a name="[6b]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
-<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[71]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 286 bytes, Stack size 32 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
+<P><STRONG><a name="[6a]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+</UL>
+
+<P><STRONG><a name="[70]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 286 bytes, Stack size 32 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-</UL>
-
-<P><STRONG><a name="[8f]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
-<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[72]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
+<P><STRONG><a name="[a3]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+</UL>
+
+<P><STRONG><a name="[71]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 
-<P><STRONG><a name="[73]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 770 bytes, Stack size 40 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
+<P><STRONG><a name="[72]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 770 bytes, Stack size 40 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_RCC_OscConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[74]"></a>HAL_SPI_Init</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_Init))
+<P><STRONG><a name="[73]"></a>HAL_SPI_Init</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI3_Init
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 </UL>
 
-<P><STRONG><a name="[75]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 150 bytes, Stack size 40 bytes, stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit))
+<P><STRONG><a name="[74]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 150 bytes, Stack size 40 bytes, stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
 </UL>
 
-<P><STRONG><a name="[77]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
+<P><STRONG><a name="[76]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
-</UL>
-
-<P><STRONG><a name="[90]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
 </UL>
 
-<P><STRONG><a name="[7b]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Callback))
-<BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+<P><STRONG><a name="[a4]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[6e]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Config))
+<P><STRONG><a name="[7a]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Callback))
+<BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+</UL>
+
+<P><STRONG><a name="[6d]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_SYSTICK_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[7a]"></a>HAL_SYSTICK_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler))
+<P><STRONG><a name="[79]"></a>HAL_SYSTICK_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_SYSTICK_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Callback
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
@@ -650,94 +649,333 @@ Global Symbols
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[84]"></a>NRF_FlushTX</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_FlushTX))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = NRF_FlushTX &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[82]"></a>NRF_ClearInterrupts</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_ClearInterrupts))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_ClearInterrupts &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
 </UL>
 
-<P><STRONG><a name="[66]"></a>NRF_IRQ_Handler</STRONG> (Thumb, 262 bytes, Stack size 32 bytes, nrf24l01.o(i.NRF_IRQ_Handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[85]"></a>NRF_EnableAutoAcknowledgement</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableAutoAcknowledgement))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableAutoAcknowledgement &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushTX
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[86]"></a>NRF_EnableCRC</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableCRC))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableCRC &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[87]"></a>NRF_EnableMaxRetransmitIRQ</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableMaxRetransmitIRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableMaxRetransmitIRQ &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[88]"></a>NRF_EnableRXDataReadyIRQ</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableRXDataReadyIRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableRXDataReadyIRQ &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[89]"></a>NRF_EnableRXPipe</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableRXPipe))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableRXPipe &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[8a]"></a>NRF_EnableTXDataSentIRQ</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_EnableTXDataSentIRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_EnableTXDataSentIRQ &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[8b]"></a>NRF_FlushRX</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_FlushRX))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = NRF_FlushRX &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[8d]"></a>NRF_FlushTX</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_FlushTX))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = NRF_FlushTX &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+</UL>
+
+<P><STRONG><a name="[65]"></a>NRF_IRQ_Handler</STRONG> (Thumb, 260 bytes, Stack size 32 bytes, nrf24l01.o(i.NRF_IRQ_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = NRF_IRQ_Handler &rArr; NRF_RXTXControl &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushTX
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8a]"></a>NRF_PowerUp</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_PowerUp))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = NRF_PowerUp &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[90]"></a>NRF_Init</STRONG> (Thumb, 246 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = NRF_Init &rArr; NRF_PowerUp &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetTXAddress
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionDelay
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionCount
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRXPayloadWidth_P0
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRXAddress_P0
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRFChannel
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetDataRate
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetCRCWidth
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetAddressWidth
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushRX
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableTXDataSentIRQ
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXPipe
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXDataReadyIRQ
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableMaxRetransmitIRQ
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableCRC
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableAutoAcknowledgement
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ClearInterrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[89]"></a>NRF_RXTXControl</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_RXTXControl))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_RXTXControl &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[92]"></a>NRF_PowerUp</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_PowerUp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = NRF_PowerUp &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
 </UL>
 
-<P><STRONG><a name="[88]"></a>NRF_ReadRXPayload</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_ReadRXPayload))
+<P><STRONG><a name="[8f]"></a>NRF_RXTXControl</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_RXTXControl))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_RXTXControl &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendPacket
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+</UL>
+
+<P><STRONG><a name="[8e]"></a>NRF_ReadRXPayload</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_ReadRXPayload))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = NRF_ReadRXPayload &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
 </UL>
 
-<P><STRONG><a name="[86]"></a>NRF_ReadRegister</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_ReadRegister))
+<P><STRONG><a name="[83]"></a>NRF_ReadRegister</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_ReadRegister))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionDelay
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionCount
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRFChannel
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetDataRate
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetCRCWidth
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetAddressWidth
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableTXDataSentIRQ
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXPipe
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXDataReadyIRQ
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableMaxRetransmitIRQ
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableCRC
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableAutoAcknowledgement
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ClearInterrupts
 </UL>
 
-<P><STRONG><a name="[85]"></a>NRF_SendCommand</STRONG> (Thumb, 164 bytes, Stack size 40 bytes, nrf24l01.o(i.NRF_SendCommand))
+<P><STRONG><a name="[8c]"></a>NRF_SendCommand</STRONG> (Thumb, 164 bytes, Stack size 40 bytes, nrf24l01.o(i.NRF_SendCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CS_RESETPIN
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CS_RESETPIN
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushTX
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetPipeAddress
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteTXPayload
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetTXAddress
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRXAddress_P0
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushTX
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_FlushRX
 </UL>
 
-<P><STRONG><a name="[87]"></a>NRF_WriteRegister</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_WriteRegister))
+<P><STRONG><a name="[9e]"></a>NRF_SendPacket</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SendPacket))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = NRF_SendPacket &rArr; NRF_RXTXControl &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_SETPIN
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteTXPayload
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[97]"></a>NRF_SetAddressWidth</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetAddressWidth))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetAddressWidth &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[96]"></a>NRF_SetCRCWidth</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetCRCWidth))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetCRCWidth &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[99]"></a>NRF_SetDataRate</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetDataRate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetDataRate &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[a0]"></a>NRF_SetPipeAddress</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_SetPipeAddress))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = NRF_SetPipeAddress &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[98]"></a>NRF_SetRFChannel</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetRFChannel))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetRFChannel &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[94]"></a>NRF_SetRXAddress_P0</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_SetRXAddress_P0))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = NRF_SetRXAddress_P0 &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[93]"></a>NRF_SetRXPayloadWidth_P0</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetRXPayloadWidth_P0))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetRXPayloadWidth_P0 &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[9a]"></a>NRF_SetRetransmittionCount</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetRetransmittionCount))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetRetransmittionCount &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[9b]"></a>NRF_SetRetransmittionDelay</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_SetRetransmittionDelay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = NRF_SetRetransmittionDelay &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteRegister
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[95]"></a>NRF_SetTXAddress</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_SetTXAddress))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = NRF_SetTXAddress &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+</UL>
+
+<P><STRONG><a name="[84]"></a>NRF_WriteRegister</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, nrf24l01.o(i.NRF_WriteRegister))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionDelay
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRetransmittionCount
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRXPayloadWidth_P0
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetRFChannel
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetDataRate
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetCRCWidth
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetAddressWidth
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableTXDataSentIRQ
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXPipe
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableRXDataReadyIRQ
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableMaxRetransmitIRQ
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableCRC
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_EnableAutoAcknowledgement
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ClearInterrupts
+</UL>
+
+<P><STRONG><a name="[9f]"></a>NRF_WriteTXPayload</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, nrf24l01.o(i.NRF_WriteTXPayload))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = NRF_WriteTXPayload &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendPacket
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.PendSV_Handler))
@@ -749,20 +987,20 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SysTick_Handler &rArr; HAL_SYSTICK_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[8e]"></a>SystemClock_Config</STRONG> (Thumb, 128 bytes, Stack size 80 bytes, main.o(i.SystemClock_Config))
+<P><STRONG><a name="[a2]"></a>SystemClock_Config</STRONG> (Thumb, 128 bytes, Stack size 80 bytes, main.o(i.SystemClock_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -777,74 +1015,77 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[9b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[af]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[b0]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[9d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[b1]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[8c]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
+<P><STRONG><a name="[9d]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteTXPayload
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
 </UL>
 
-<P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 282 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = main &rArr; NRF_PowerUp &rArr; NRF_WriteRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 396 bytes, Stack size 8 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; NRF_Init &rArr; NRF_PowerUp &rArr; NRF_ReadRegister &rArr; NRF_SendCommand &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_PowerUp
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI3_Init
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetPipeAddress
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendPacket
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRegister
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[8b]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
+<P><STRONG><a name="[9c]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_WriteTXPayload
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_ReadRXPayload
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[79]"></a>SPI_CheckFlag_BSY</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.SPI_CheckFlag_BSY))
+<P><STRONG><a name="[78]"></a>SPI_CheckFlag_BSY</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.SPI_CheckFlag_BSY))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 </UL>
 
-<P><STRONG><a name="[78]"></a>SPI_WaitFlagStateUntilTimeout</STRONG> (Thumb, 150 bytes, Stack size 24 bytes, stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout))
+<P><STRONG><a name="[77]"></a>SPI_WaitFlagStateUntilTimeout</STRONG> (Thumb, 150 bytes, Stack size 24 bytes, stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
-</UL>
-
-<P><STRONG><a name="[70]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.NVIC_SetPriority))
-<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
 
-<P><STRONG><a name="[7c]"></a>MX_GPIO_Init</STRONG> (Thumb, 266 bytes, Stack size 64 bytes, main.o(i.MX_GPIO_Init))
+<P><STRONG><a name="[6f]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.NVIC_SetPriority))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+</UL>
+
+<P><STRONG><a name="[7b]"></a>MX_GPIO_Init</STRONG> (Thumb, 266 bytes, Stack size 64 bytes, main.o(i.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -853,44 +1094,45 @@ Local Symbols
 <P><STRONG><a name="[7e]"></a>MX_SPI1_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.MX_SPI1_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_SPI1_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7f]"></a>MX_SPI2_Init</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, main.o(i.MX_SPI2_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_SPI2_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
+<P><STRONG><a name="[7f]"></a>NRF_CE_RESETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CE_RESETPIN))
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[80]"></a>MX_SPI3_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.MX_SPI3_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_SPI3_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendPacket
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
 </UL>
 
-<P><STRONG><a name="[81]"></a>NRF_CE_RESETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CE_RESETPIN))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<P><STRONG><a name="[80]"></a>NRF_CE_SETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CE_SETPIN))
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
-</UL>
-
-<P><STRONG><a name="[82]"></a>NRF_CE_SETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CE_SETPIN))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendPacket
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_IRQ_Handler
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_RXTXControl
 </UL>
 
-<P><STRONG><a name="[83]"></a>NRF_CS_RESETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CS_RESETPIN))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<P><STRONG><a name="[81]"></a>NRF_CS_RESETPIN</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrf24l01.o(i.NRF_CS_RESETPIN))
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SetupGPIO
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_SendCommand
+</UL>
+
+<P><STRONG><a name="[91]"></a>NRF_SetupGPIO</STRONG> (Thumb, 114 bytes, Stack size 40 bytes, nrf24l01.o(i.NRF_SetupGPIO))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = NRF_SetupGPIO &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CS_RESETPIN
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_CE_RESETPIN
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NRF_Init
 </UL>
 <P>
 <H3>

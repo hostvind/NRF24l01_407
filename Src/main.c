@@ -75,14 +75,13 @@ static void MX_SPI3_Init(void);
 nrf24l01_dev nrf1;
 uint8_t push[32] = "heyoo";
 uint8_t pull[32] = "yoohe";
-uint8_t ADDR_1[5] = {'H','V','I','N','D'};
-uint8_t ADDR_2[5] = {'H','J','E','L','L'};
+uint8_t ADDR_1[5] = {'R','F','1','0','3'};  //TX, RX_P0
+uint8_t ADDR_2[5] = {'R','F','4','0','7'};  //PF_P1
 uint8_t PIPE_1[5] = {'P','I','P','E','1'};
 uint8_t uart_str[32] = "";
 /* FOR DEBUG */
-HAL_SPI_StateTypeDef spi_state;
-static NRF_RESULT res;
-volatile uint8_t IRQ1_counter, IRQ2_counter;
+uint8_t i,j,reg;
+volatile uint8_t IRQ_flags;
 /* USER CODE END 0 */
 
 /**
@@ -95,9 +94,8 @@ int main(void)
   /* USER CODE BEGIN 1 */
 uint8_t i=0;
 uint8_t j=0;
-    IRQ1_counter = 0;
-    IRQ2_counter = 0;
-    nrf1.DATA_RATE = NRF_DATA_RATE_1MBPS;
+    IRQ_flags = 0;
+    nrf1.DATA_RATE = NRF_DATA_RATE_250KBPS;
     nrf1.TX_POWER = NRF_TX_PWR_0dBm;
     nrf1.CRC_WIDTH = NRF_CRC_WIDTH_1B;
     nrf1.ADDR_WIDTH = NRF_ADDR_WIDTH_5;
@@ -141,14 +139,15 @@ uint8_t j=0;
   MX_GPIO_Init();
 //  MX_USART1_UART_Init();
   MX_SPI1_Init();
-  MX_SPI2_Init();
-  MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
-	NRF_ReadRegister(&nrf1, NRF_STATUS, &i);
-/*DEBUG LINE*/  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
-    HAL_Delay(200);
     HAL_NVIC_DisableIRQ(EXTI2_IRQn);
     HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);
+	NRF_ReadRegister(&nrf1, NRF_STATUS, &i);
+/*DEBUG LINE*/  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+    NRF_Init(&nrf1);
+    NRF_SetPipeAddress (&nrf1, ADDR_2, 1);
+    HAL_Delay(200);
+    HAL_NVIC_EnableIRQ(EXTI2_IRQn);
 /*DEBUG LINE*/  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
@@ -160,27 +159,49 @@ uint8_t j=0;
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-      /*TRY SPI1*/
-    nrf1.spi=&hspi1;
-    if (NRF_PowerUp(&nrf1,1)==NRF_OK)
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
+      /*NO FUN WITHOUT CHECK*/
+    NRF_ReadRegister(&nrf1, NRF_CONFIG, &reg);
+    if ( !(reg&0x80) && (reg & 2) )
+    {           /*==========FUN HERE==========*/        
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);        //GREEN
+            NRF_SendPacket(&nrf1,push);
+        
+        
+        if (IRQ_flags&(1<<6))   // RX FIFO Interrupt
+        {
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);    //ORANGE
+            HAL_Delay(100);
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);    //ORANGE
+            HAL_Delay(100);
+        }
+        else 
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET); 
+        
+        if (IRQ_flags&(1<<4))   // MaxRetransmits reached
+        {
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);    //RED
+            HAL_Delay(100);
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);    //RED
+            HAL_Delay(100);
+        }
+        else 
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET); 
+        
+        if (IRQ_flags&(1<<5))   // TX Data Sent Interrupt
+        {
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);    //BLUE
+            HAL_Delay(100);
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);    //BLUE
+            HAL_Delay(100);
+        }
+        else 
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET); 
+            
+    }
     else
         HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);    
-    HAL_Delay(10);
-      /*TRY SPI2*/
-    nrf1.spi=&hspi2;
-    if (NRF_PowerUp(&nrf1,1)==NRF_OK)
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
-    else
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);    
-    HAL_Delay(10);
-      /*TRY SPI3*/
-    nrf1.spi=&hspi3;
-    if (NRF_PowerUp(&nrf1,1)==NRF_OK)
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
-    else
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);    
-    HAL_Delay(10);  
+    IRQ_flags=0;
+    HAL_Delay(50);
   }
   /* USER CODE END 3 */
 
